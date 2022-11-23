@@ -1,0 +1,12 @@
+h3 {
+  padding-left: 2%;
+}
+
+p {
+  padding-left: 2%;
+  padding-top: 1%;
+}
+
+.transaction-date {
+  border-bottom: 1px solid black;
+}

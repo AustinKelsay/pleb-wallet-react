@@ -1,38 +1,109 @@
-.App {
+body {
+  background-color: #192734;
+  font-family: monospace;
+}
+
+header {
+  border-bottom: 2px solid #ffbf46;
+}
+
+h1 {
   text-align: center;
+  color: #8a4fff;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+img {
+  width: 100%;
+  height: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+footer {
+  border-top: 2px solid #ffbf46;
+  padding: 1%;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+footer p {
+  color: #8a4fff;
+}
+
+.balance-card {
+  background-color: #ffbf46;
+  border: 2px solid #8a4fff;
+  padding: 1%;
+  width: 25%;
+  margin-top: 3%;
+  margin-bottom: 1%;
+  border-radius: 5px;
+}
+
+.balance-card p {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.row {
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-.App-link {
-  color: #61dafb;
+.row-item {
+  background-color: ghostwhite;
+  border: 2px solid #8a4fff;
+  border-radius: 5px;
+  height: 300px;
+  width: 40%;
+  overflow: scroll;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.row-item h3 {
+  padding-left: 2%;
+}
+
+.row-item p {
+  padding-left: 2%;
+}
+
+.transaction .transaction-amount {
+  padding-top: 1%;
+}
+
+.transaction-amount {
+  border-bottom: 1px solid black;
+}
+
+@media (max-width: 876px) {
+  .row-item {
+    width: 100%;
+    height: 200px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .balance-card {
+    width: 100%;
+    text-align: center;
+    margin-right: 2%;
+    margin-left: 2%;
+  }
+}
+
+@media (max-width: 615px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .row-item {
+    margin-top: 1%;
+  }
+
+  .balance-card {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 1%;
   }
 }
