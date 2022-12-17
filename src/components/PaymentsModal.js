@@ -26,12 +26,14 @@ const PaymentsModal = ({ modalState, setModalState }) => {
     checkingId: "",
   });
 
+  const apiKey = process.env.REACT_APP_X_API_KEY;
+
   const handleSend = (e) => {
     // Keep the page from refreshing when the form is submitted
     e.preventDefault();
 
     const headers = {
-      "X-Api-Key": "52cac212fc664da393ac45df991fdb84",
+      "X-Api-Key": apiKey,
     };
     const data = {
       bolt11: formData.invoiceToPay,
@@ -53,7 +55,7 @@ const PaymentsModal = ({ modalState, setModalState }) => {
     e.preventDefault();
 
     const headers = {
-      "X-Api-Key": "52cac212fc664da393ac45df991fdb84",
+      "X-Api-Key": apiKey,
     };
     const data = {
       amount: formData.amount,

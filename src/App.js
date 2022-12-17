@@ -11,6 +11,8 @@ function App() {
   const [transactions, setTransactions] = useState([]);
   const [chartData, setChartData] = useState(null);
 
+  const apiKey = process.env.REACT_APP_X_API_KEY;
+
   const getPrice = () => {
     // Axios is a library that makes it easy to make http requests
     // After we make a request, we can use the .then() method to handle the response asychronously
@@ -32,7 +34,7 @@ function App() {
   const getWalletBalance = () => {
     // ToDo: Lookup how to move the X-API-Key to a .env file to keep it secret for when we push to Github
     const headers = {
-      "X-Api-Key": "52cac212fc664da393ac45df991fdb84",
+      "X-Api-Key": apiKey,
     };
     axios
       .get("https://legend.lnbits.com/api/v1/wallet", { headers })
@@ -46,7 +48,7 @@ function App() {
   const getTransactions = () => {
     // ToDo: Lookup how to move the X-API-Key to a .env file to keep it secret for when we push to Github
     const headers = {
-      "X-Api-Key": "52cac212fc664da393ac45df991fdb84",
+      "X-Api-Key": apiKey,
     };
     axios
       .get("https://legend.lnbits.com/api/v1/payments", { headers })
