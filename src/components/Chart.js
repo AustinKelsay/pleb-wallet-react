@@ -17,7 +17,7 @@ const Chart = ({ chartData }) => {
     <div className="chart-container">
       {chartData && chartData.length <= 1 ? (
         // ToDo: Add a loading spinner
-        <p>Loading</p>
+        <p>loading</p>
       ) : (
         <LineChart
           xLabel="Time"
