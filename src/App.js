@@ -24,7 +24,7 @@ function App() {
         console.log(res.data.data.amount);
         // set price to only 2 decimal places
         setPrice(Number(res.data.data.amount).toFixed(2));
-        updateChartData(res.data.data.amount);
+        updateChartData(Number(res.data.data.amount).toFixed(2));
       })
       // .catch is a promise that will run if the API call fails
       .catch((err) => {
